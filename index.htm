@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小程式大冒險 - 跟著 Swift 學開發</title>
+    <!-- 引入 Tailwind CSS (2026 現代化樣式) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google 字體 -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <!-- 引入 Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com"/>
+    <style>
+        body {
+            font-family: 'Varela Round', 'ZCOOL KuaiLe', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            scroll-behavior: smooth;
+        }
+        .swift-orange { color: #FF4500; }
+        .bg-swift-orange { background-color: #FF4500; }
+        .card-hover:hover {
+            transform: translateY(-10px) rotate(2deg);
+            transition: all 0.3s ease;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden text-gray-800">
+
+    <!-- 導航欄 -->
+    <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
+        <div class="text-2xl font-bold flex items-center gap-2">
+            <span class="text-4xl">🐦</span> <span class="swift-orange">Swift Adventure</span>
+        </div>
+        <div class="space-x-6 hidden md:block text-lg">
+            <a href="#intro" class="hover:text-orange-500 transition">為什麼學?</a>
+            <a href="#levels" class="hover:text-orange-500 transition">冒險關卡</a>
+            <a href="#start" class="bg-swift-orange text-white px-6 py-2 rounded-full hover:scale-105 transition block md:inline-block">立即出發</a>
+        </div>
+    </nav>
+
+    <!-- 英雄區 (Hero) -->
+    <header class="relative py-20 px-10 text-center bg-orange-50 overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate__animated animate__bounceIn">
+                啟航你的第一個 <span class="swift-orange underline decoration-wavy">iOS App</span>！
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-10">
+                2026 年最強大的小探險家，用程式碼打造自己的魔法世界。
+            </p>
+            <div class="floating inline-block mb-10">
+                <img src="https://developer.apple.com" alt="Swift Logo" class="w-24 h-24">
+            </div>
+            <br>
+            <a href="#levels" class="bg-blue-400 text-white text-2xl px-12 py-4 rounded-full shadow-lg hover:bg-blue-500 transition-all animate__animated animate__pulse animate__infinite">
+                開始探險 ➔
+            </a>
+        </div>
+        <!-- 裝飾背景 -->
+        <div class="absolute -top-10 -left-10 text-8xl opacity-10">🚀</div>
+        <div class="absolute bottom-10 right-10 text-8xl opacity-10">💻</div>
+    </nav>
+
+    <!-- 特色區 (Intro) -->
+    <section id="intro" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16">為什麼小朋友也愛 Swift？</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-white p-8 rounded-3xl shadow-xl card-hover text-center border-t-8 border-yellow-400">
+                <div class="text-6xl mb-4">🧩</div>
+                <h3 class="text-2xl font-bold mb-4">像拼圖一樣簡單</h3>
+                <p class="text-gray-500">不用死背指令，用最直覺的邏輯，組合出屬於你的驚喜。</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl card-hover text-center border-t-8 border-green-400">
+                <div class="text-6xl mb-4">🎨</div>
+                <h3 class="text-2xl font-bold mb-4">魔法畫布</h3>
+                <p class="text-gray-500">寫下一行 Swift 程式碼，螢幕上就會立刻出現美麗的顏色與動畫！</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl card-hover text-center border-t-8 border-purple-400">
+                <div class="text-6xl mb-4">📱</div>
+                <h3 class="text-2xl font-bold mb-4">實現在手機上</h3>
+                <p class="text-gray-500">親手做的遊戲，真的可以在爸爸媽媽的 iPhone 上跑起來喔！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 冒險關卡 (Levels) -->
+    <section id="levels" class="py-20 bg-blue-50">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-16">闖關計畫：三步成為大師</h2>
+            <div class="flex flex-col space-y-8">
+                <div class="flex items-center gap-6 bg-white p-6 rounded-2xl shadow-md text-left">
+                    <span class="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl font-bold">1</span>
+                    <div>
+                        <h4 class="text-xl font-bold">基礎冒險：走迷宮</h4>
+                        <p>在 Swift Playgrounds 中控制小怪獸，學習最基本的指令。</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 bg-white p-6 rounded-2xl shadow-md text-left">
+                    <span class="bg-green-500 text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl font-bold">2</span>
+                    <div>
+                        <h4 class="text-xl font-bold">邏輯魔法：讓事情動起來</h4>
+                        <p>學習迴圈與條件判斷，讓你的 App 有聰明的大腦。</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 bg-white p-6 rounded-2xl shadow-md text-left">
+                    <span class="bg-orange-500 text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl font-bold">3</span>
+                    <div>
+                        <h4 class="text-xl font-bold">實戰開發：我的第一個 App</h4>
+                        <p>使用 SwiftUI 工具，親手設計按鈕、清單與動態畫面。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 (Footer) -->
+    <footer id="start" class="py-20 text-center bg-gray-900 text-white">
+        <h2 class="text-3xl font-bold mb-6">準備好開始你的 2026 冒險了嗎？</h2>
+        <p class="mb-10 text-gray-400">現在就下載免費工具，開啟無限創意！</p>
+        <div class="flex justify-center gap-4">
+            <a href="https://www.apple.com" class="bg-white text-black px-8 py-3 rounded-xl font-bold hover:scale-105 transition">下載 Playgrounds</a>
+            <a href="https://developer.apple.com" class="bg-swift-orange text-white px-8 py-3 rounded-xl font-bold hover:scale-105 transition">探索 Xcode</a>
+        </div>
+        <p class="mt-20 text-sm text-gray-500">© 2026 小探險家 Swift 程式教育</p>
+    </footer>
+
+</body>
+</html>
